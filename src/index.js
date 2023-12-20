@@ -5,6 +5,10 @@ const { exec } = require("child_process");
 const app = express();
 const port = 3000;
 
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
+});
+
 // Configurar multer para manejar la carga de archivos
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
